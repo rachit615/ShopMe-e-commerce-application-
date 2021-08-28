@@ -1,0 +1,17 @@
+package com.example.shopme.utils
+
+import android.content.Context
+import android.graphics.Typeface
+import android.util.AttributeSet
+import androidx.appcompat.widget.AppCompatTextView
+
+class SMTextViewRegular(context: Context,attributeSet
+    : AttributeSet):AppCompatTextView(context,attributeSet) {
+    init {
+        applyFont()
+    }
+    private fun applyFont(){
+        val typefaceRegular:Typeface= Typeface.createFromAsset(context.assets,"Montserrat-Regular.ttf")
+        setTypeface(typefaceRegular)
+    }
+}
